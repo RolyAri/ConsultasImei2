@@ -1,0 +1,136 @@
+<div class="ui-modal" *ngIf="open">
+    <div class="content">
+    <div class="win">
+        <div class="header">
+            <div style="display: inline-block; padding-top: 2px">
+                <label>{{ headTitle }}</label>
+            </div>
+            <!--<span (click)="fnCancel()">X</span>-->
+        </div>
+        <div class="mainx">
+            <div>
+                <!-- <img src = '{{ rutaUrl }}'> -->
+            </div>
+            <div class="ta-center">
+                {{ info }} <br>
+                <form>
+                    <div class="container-form-components">
+                    <mat-form-field class="container-component" appearance="outline">
+                        <mat-label>Codigo IMEI</mat-label>
+                        <input matInput placeholder="Codigo" type="number" id="fomr-input-imei">
+                    </mat-form-field>
+                    <mat-form-field class="container-component mat-input-width" appearance="outline">
+                        <mat-label>Seleccione una empresa</mat-label>
+                        <mat-select>
+                            <mat-option>None</mat-option>
+                            <mat-option value="option1">Option 1</mat-option>
+                            <mat-option value="option2">Option 2</mat-option>
+                            <mat-option value="option3">Option 3</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field class="container-component mat-input-width" appearance="outline">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput placeholder="Nombre">
+                    </mat-form-field>
+                    <mat-form-field class="container-component mat-input-width" appearance="outline">
+                        <mat-label>Apellido</mat-label>
+                        <input matInput placeholder="Apellido">
+                    </mat-form-field>
+                    <mat-form-field class="container-component mat-input-width" appearance="outline">
+                        <mat-label>Seleccione una marca</mat-label>
+                        <mat-select>
+                            <mat-option>None</mat-option>
+                            <mat-option value="option1">Option 1</mat-option>
+                            <mat-option value="option2">Option 2</mat-option>
+                            <mat-option value="option3">Option 3</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field class="container-component mat-input-width" appearance="outline">
+                        <mat-label>Seleccione un modelo</mat-label>
+                        <mat-select>
+                            <mat-option>None</mat-option>
+                            <mat-option value="option1">Option 1</mat-option>
+                            <mat-option value="option2">Option 2</mat-option>
+                            <mat-option value="option3">Option 3</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field class="container-component" appearance="outline">
+                        <mat-label>Número Móvil</mat-label>
+                        <input matInput placeholder="Número Móvil" type="number" id="fomr-input-num">
+                    </mat-form-field>
+                    <mat-form-field class="container-component mat-input-width" appearance="outline">
+                        <mat-label>Código de Bloqueo</mat-label>
+                        <input matInput placeholder="Código de Bloqueo" type="number">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="container-component mat-input-width">
+                        <mat-label>Fecha de reporte al operador</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field class="container-component mat-input-width" appearance="outline">
+                        <mat-label>Hora de reporte del operador</mat-label>
+                        <input matInput
+                               name="selected_time_A"
+                               [ngxMatTimepicker]="pickerA"
+                               placeholder="Hora"
+                               readonly />
+                        <mat-icon matSuffix
+                                  (click)="pickerA.open()">
+                            watch_later
+                        </mat-icon>
+                    </mat-form-field>
+                    <ngx-mat-timepicker #pickerA></ngx-mat-timepicker>
+                    <mat-form-field appearance="outline" class="container-component mat-input-recu-width">
+                        <mat-label>Fecha de reporte de recuperación</mat-label>
+                        <input matInput [matDatepicker]="picker2">
+                        <mat-hint style="color: red;">(Solo si aplica)</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                        <mat-datepicker #picker2></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field class="container-component mat-input-width" appearance="outline">
+                        <mat-label>Número Telefónico de Contacto</mat-label>
+                        <input matInput placeholder="Número de Contacto" type="number">
+                    </mat-form-field>
+                    <mat-form-field class="container-component mat-input-width" appearance="outline">
+                        <mat-label>Problema detectado</mat-label>
+                        <mat-select>
+                            <mat-option>None</mat-option>
+                            <mat-option value="option1">Option 1</mat-option>
+                            <mat-option value="option2">Option 2</mat-option>
+                            <mat-option value="option3">Option 3</mat-option>
+                        </mat-select>
+                    </mat-form-field>        
+                    <mat-form-field class="material-textarea" appearance="outline">
+                        <mat-label>Comentarios</mat-label>
+                        <textarea matInput placeholder="Deje un comentario..."></textarea>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline" class="container-component"> 
+                        <mat-label>Seleccione archivo</mat-label>
+                        <input matInput readonly type="text" id="fakeFileInput" (click)="hiddenInput.click()">
+                        <input hidden type="file" accept=".pdf, .txt, .jpg, .jpeg, .png" #hiddenInput (change)="GetFileOnLoad($event)">
+                        <mat-icon matSuffix>folder_open</mat-icon>
+                     </mat-form-field>
+                     <mat-form-field class="container-component mat-input-width" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input type="email" matInput placeholder="Ex. pat@example.com">
+                      </mat-form-field>
+                    </div>
+                </form>
+            </div>
+        
+        </div>
+      
+        <div class="footer">
+            <button class="btn btn-ui" (click)="fnCancel()">
+                <img [src]="icoSrv.getIcon('cancel')"/><span>Cancelar</span></button>
+            <button class="btn btn-ui" (click)="fnAcept()">
+                <img [src]="icoSrv.getIcon('acept')"/><span>Aceptar</span></button>
+        </div>
+    </div>
+    </div>
+    </div>
+    

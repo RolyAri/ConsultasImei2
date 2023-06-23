@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<div class="container-form">
+    <div class="container-form-components">
+        <mat-form-field class="container-IMEI" appearance="outline" color="primary">
+            <mat-label>Ingrese los 15 dígitos del IMEI</mat-label>
+            <input matInput placeholder="Verificar estado" type="number" id="inputIMEI">
+        </mat-form-field>
+        <button (click)="openModal()" mat-fab extended class="button" color="primary">
+            <mat-icon>search</mat-icon>
+            Verificar
+        </button>
+    </div>
+    <div class="container-button-form">
+        <button (click)="abrirModal()" mat-fab extended color="primary" class="button">Formulario</button>
+    </div>
+</div>
+<app-formulario-modal *ngIf="modalVisible" (closeModalEvent)="cerrarModal()"></app-formulario-modal>
+<app-imei-modal *ngIf="modalVisibleImei" (closeModalEvent)="closeModal()"></app-imei-modal>

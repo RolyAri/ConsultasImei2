@@ -1,0 +1,85 @@
+.info-IMEI{
+    margin: 2rem auto;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    width: 40%;
+  }
+  .info-IMEI h1{
+    color: #F18626;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+  .info-IMEI p span{
+    font-weight: bold;
+  }
+  .container-form{
+    margin: 2rem;
+  }
+  .container-form-components{
+    display: flex;
+    justify-content: center;
+  }
+  .button{
+    font-weight: bold;
+  }
+  .container-IMEI{
+    width: 20%;
+    margin-right: 2rem;
+  }
+  .container-info{
+    /* margin: 0 auto;
+    text-align: center; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .info-codigo-imei{
+    margin-top: 2rem;
+    text-align: center;
+    width: 30%;
+  }
+  .info-codigo-imei img{
+    width: 300px;
+    height: 200px;
+  }
+  .container-button-form{
+    text-align: center;
+  }
+  .title-info{
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+@media only screen and (max-width: 1250px){
+  .container-IMEI{
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 1025px){
+  .container-IMEI{
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 700px){
+  .container-IMEI{
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 500px){
+  .container-form-components{
+    display: block;
+    text-align: center;
+  }
+  .button{
+    display: inline-flex;
+    margin-bottom: 1rem;
+  }
+  .container-IMEI{
+    width: 100%;
+  }
+}

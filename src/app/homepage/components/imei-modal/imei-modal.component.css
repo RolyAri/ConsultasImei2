@@ -1,0 +1,48 @@
+@import url(../../../../assets/styles/components/_ui.modal.scss);
+@import url(../../../../assets/styles/components/_button.scss);
+.mainx {
+    background: #fff;
+    padding: .5rem .75rem .5rem .5rem;
+    display: grid;
+    grid-template-columns: 36px 1fr; 
+    grid-template-rows: minmax(50px, max-content); 
+    gap: .5rem;
+    align-items: center;   
+    justify-items: center;
+  }
+  
+  .win {
+    height: auto;
+    width: 25%;
+  }
+
+  @media only screen and (max-width: 1331px){
+    .win{
+      height: auto;
+      width: 30%;
+    }
+  }
+  @media only screen and (max-width: 1109px){
+    .win{
+      height: auto;
+      width: 40%;
+    }
+  }
+  @media only screen and (max-width: 839px){
+    .win{
+      height: auto;
+      width: 50%;
+    }
+  }
+  @media only screen and (max-width: 665px){
+    .win{
+      height: auto;
+      width: 70%;
+    }
+  }
+  @media only screen and (max-width: 475px){
+    .win{
+      height: auto;
+      width: 90%;
+    }
+  }

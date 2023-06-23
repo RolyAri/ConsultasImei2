@@ -1,0 +1,48 @@
+@import url(../../../../assets/styles/components/_ui.modal.scss);
+@import url(../../../../assets/styles/components/_button.scss);
+.mainx {
+    background: #fff;
+    padding: .5rem .75rem .5rem .5rem;
+    display: grid;
+    grid-template-columns: 36px 1fr; 
+    grid-template-rows: minmax(50px, max-content); 
+    gap: .5rem;
+    align-items: center;   
+    justify-items: center;
+  }
+  
+  .win {
+    height: auto;
+    width: 70%;
+  }
+  
+  .container{
+    margin: 1rem 1rem;
+}
+.container-component{
+    margin-right: 1rem;
+    margin-bottom: 1.4rem;
+}
+.mat-input-width{
+    width: 25%;
+}
+.mat-input-recu-width{
+    width: 28%;
+}
+.material-textarea{
+    width: 60%;
+}
+.material-textarea textarea{
+    height: 100px;
+}
+.button-form{
+    font-weight: bold;
+}
+.container-form-components{
+    display: flex;
+    flex-wrap: wrap;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
